@@ -67,3 +67,52 @@ p {
   font-size: 2rem;
   margin-top: 2px;
 }
+
+#skills {
+  background-color: #45567d;
+  text-align: center;
+  padding: 10px;
+}
+.skills-card-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.skills-card {
+  display: flex;
+  padding: 4px;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #be3144;
+  padding: 10px;
+  padding-left: 40px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.skill-name {
+  color: #f0f0f0;
+  margin: 0;
+  margin-left: 55px;
+}
+.skill-icon {
+  width: 20px;
+}
+.skills-heading {
+  margin-left: 0;
+}
+@media (min-width: 700px) {
+  .skills-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .skills-card {
+    width: 49%;
+    margin-right: 10px;
+  }
+  #skills {
+    padding: 10px 50px;
+  }
+}
