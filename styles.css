@@ -8,41 +8,81 @@ body {
 .nav-bg {
   background-color: #be3144;
 }
-
-li {
-  font-size: 1.5rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  line-height: 1.4;
-  margin-right: 2px;
-  padding: 10px;
-}
-nav {
-  margin-top: 0;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f0f0f0;
   position: fixed;
   top: 0;
   width: 100%;
 }
-a:hover {
-  color: black;
+.brand-title {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  font-family: "Poppins", sans-serif;
 }
-ul {
-  list-style: none;
+.navbar-links ul {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
 }
-a {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
+.navbar-links li {
+  list-style: none;
+}
+.navbar-links li a {
   text-decoration: none;
   color: #f0f0f0;
+  padding: 1rem;
+  display: block;
+  font-family: "Poppins", sans-serif;
 }
-a:hover {
-  color: black;
+.navbar-links li a:hover {
+  background-color: black;
 }
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31px;
+  height: 21px;
+}
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+@media (max-width: 700px) {
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links li {
+    text-align: center;
+  }
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
 #about {
   background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
   height: 100vh;
@@ -102,6 +142,18 @@ p {
 .skills-heading {
   margin-left: 0;
 }
+#Projects {
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.projects-heading {
+  text-align: center;
+  margin: 0;
+}
+
 @media (min-width: 700px) {
   .skills-card-container {
     display: flex;
